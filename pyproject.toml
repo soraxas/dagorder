@@ -4,11 +4,22 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
+dependencies = [
+    "soraxas-toolbox",
+]
 
 [dependency-groups]
 dev = [
+    "matplotlib>=3.10.7",
+    "pydot>=4.0.1",
     "pytest>=9.0.1",
+]
+examples = [
+    "soraxas-toolbox>=0.1.6",
 ]
 
 [tool.isort]
 profile = "black"
+
+[tool.uv.sources]
+soraxas-toolbox = { git = "https://github.com/soraxas/python-soraxas_toolbox" }
