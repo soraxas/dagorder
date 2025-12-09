@@ -41,16 +41,15 @@ order = scheduler.compute_order(enabled_leaves={"B", "C"})
 ```sh
 uv run --with numpy examples/run.py
 ```
+
 Example graph:
 
 <img width="919" height="702" alt="dag" src="https://github.com/user-attachments/assets/0a12bcac-c6b8-4abe-931a-c01c231c7f0b" />
 
 With only needing the results from nodes `M`, `L`, `C` (with some custom task priority), `dagorder` provided the compute order of
+
 ```
 A -> B -> E -> F -> J -> [M] (priority 10)
 [C] (priority 3)
 D -> H -> I -> K -> L (priority 0)
 ```
-
-
-
